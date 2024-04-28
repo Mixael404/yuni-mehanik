@@ -44,23 +44,24 @@ function sortFields(data){
         }
         const fieldToSort = e.target.dataset.type
         const currentOrder = e.target.dataset?.order
-        const dataToSort = searchRows(search.value , data)
+        
         if(currentOrder === "ASC"){
             e.target.dataset.order = 'DESC'
-            dataToSort.sort((a,b) => {
+            data.sort((a,b) => {
                 if(a[fieldToSort] < b[fieldToSort]) return 1
                 if(a[fieldToSort] > b[fieldToSort]) return -1
                 return 0
             })
         } else{
-            dataToSort.sort((a,b) => {
+            data.sort((a,b) => {
                 e.target.dataset.order = 'ASC'
                 if(a[fieldToSort] < b[fieldToSort]) return -1
                 if(a[fieldToSort] > b[fieldToSort]) return 1
                 return 0
             })
         }
-        renderRows(dataToSort)
+        const dataToShow = searchRows(search.value , data)
+        renderRows(dataToShow)
     })
 
 }
