@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button id="show-modal">Show modal</button>
+    <div class="modal__bg hidden">
+        <form class="modal__body">
+            <h2 class="modal__title">Стать партнёром проекта</h2>
+            <div class="modal__main-inputs">
+                <div class="main-inputs__text-fields">
+                    <label for="name"><span class="red">✱</span> Название организации</label>
+                    <input id="name" required type="text">
+                    <label for="phone"><span class="red">✱</span> Телефон</label>
+                    <input id="phone" required type="text">
+                    <label for="email"><span class="red">✱</span> E-mail</label>
+                    <input id="email"  type="text" required>
+                </div>
+                <div class="main-inputs__logo">
+                    <p class="logo__label"><span class="red">✱</span> Логотип (jpeg, png)</p>
+                    <div class="logo">
+                        <div class="logo__image-wrapper">
+                            <img src="./assets/images/logo-placeholder.png" alt="placeholder" class="logo__image" width="163" height="163" id="logo-preview">
+                            <div class="logo_reset">
+                                <img src="./assets/images/close-icon.png" alt="close">
+                            </div>
+                            <label for="logo-input" class="logo__logo-input">
+                                <img src="./assets/images/icons/select-file-icon.png" alt="upload" width="29" height="29">
+                                <p class="logo-input__label">Выберете файл</p>
+                                <input required type="file" id="logo-input" accept=".jpg, .jpeg, .png">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <label for="email"><span class="red">✱</span> Направление</label>
+            <select id="domain"  type="text">
+                <option value="ecology" selected>Экология</option>
+            </select>
+
+            <div class="modal__input-wrapper">
+                <input id="web" class="input-wrapper__input" type="text">
+                <img src="./assets/images/icons/web.png" alt="web" width="18" height="18">
+            </div>
+            <div class="modal__input-wrapper">
+                <input id="vk" class="input-wrapper__input" type="text">
+                <img src="./assets/images/icons/vk.png" alt="web" width="18" height="18">
+            </div>
+            <div class="modal__input-wrapper">
+                <input id="ok" class="input-wrapper__input" type="text">
+                <img src="./assets/images/icons/odnoklassniki .png" alt="web" width="18" height="18">
+            </div>
+            <div class="modal__input-wrapper">
+                <input id="facebook" class="input-wrapper__input" type="text">
+                <img src="./assets/images/icons/facebook.png" alt="web" width="18" height="18">
+            </div>
+            <div class="modal__input-wrapper">
+                <input id="instagram" class="input-wrapper__input" type="text">
+                <img src="./assets/images/icons/instagram.png" alt="web" width="18" height="18">
+            </div>
+            <div class="modal__input-wrapper">
+                <input id="youtube" class="input-wrapper__input" type="text">
+                <img src="./assets/images/icons/youtube .png" alt="web" width="18" height="18">
+            </div>
+            <label for="leader">Руководитель</label>
+            <input type="text" id="leader">
+            <input type="submit" class="modal__submit" value="Стать партнёром проекта">
+            <input type="reset" class="modal__cancel" value="Отменить">
+        </form>
+    </div>
+    <script src="./js/validation.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
