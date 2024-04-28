@@ -16,7 +16,7 @@ const previewPhoto = () => {
 logoInput.addEventListener('change', previewPhoto);
 
 logoReset.addEventListener('click', () => {
-  logoWrapper.src = '../assets/images/logo-placeholder.png';
+  logoWrapper.src = '../practice-1/assets/images/logo-placeholder.png'
   logoInput.value = ''
 })
 
